@@ -1,3 +1,5 @@
+// let browser = (browser) ? browser : chrome.browser;
+
 const interval = setInterval(() => {
   const container = document.querySelector("#app div[class^='container__']");
   const sub = document.querySelector("#app div[class^='container__'] > div");

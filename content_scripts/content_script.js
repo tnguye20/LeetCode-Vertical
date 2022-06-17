@@ -1,4 +1,6 @@
 (function() {
+    // let browser = (browser) ? browser : chrome.browser;
+
     // Prevent duplicate injection of content script
     if (window.hasRun) {
       return;

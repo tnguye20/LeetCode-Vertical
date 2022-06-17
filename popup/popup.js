@@ -1,3 +1,5 @@
+// let browser = (browser) ? browser : chrome.browser;
+
 const slider = document.querySelector(".slider");
 slider.min = "0";
 slider.max = screen.height;
