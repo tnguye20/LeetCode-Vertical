@@ -1,0 +1,38 @@
+
+{
+
+  "manifest_version": 2,
+  "name": "LeetCode-Vertical",
+  "version": "1.0",
+
+  "description": "Enable Vertical mode in Leetcode Problem pages",
+
+  "icons": {
+    "48": "icons/leet-icon-48.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.leetcode.com/problems/*"],
+      "js": ["main.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/leet-icon-32.png",
+    "default_title": "LeetCode Vertical",
+    "default_popup": "popup/popup.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tnguye20@uvm.edu"
+    }
+  }
+}
