@@ -14,8 +14,14 @@ const interval = setInterval(() => {
     // Clear Running Interval
     clearInterval(interval);
 
-    // Set Column layout
-    container.style.flexDirection = "column";
+    const setContainer = () => {
+      const value = (screen.height > screen.width) ? "column" : "row";
+      container.style.flexDirection = value;
+      browser.storage.local.set({
+        lc_window_size: value
+      })
+    }
+    setContainer();
 
     // Check storage
     browser.storage.local.get().then((results) => {
@@ -25,6 +31,13 @@ const interval = setInterval(() => {
       if (results["lc_orientation"]) {
         container.style.flexDirection = results["lc_orientation"];
       }
+    })
+
+    //Event listener when screen size change
+    // Set Column layout
+    window.addEventListener("resize", () => {
+      console.log("resize");
+      setContainer();
     })
   }
 }, 500);
