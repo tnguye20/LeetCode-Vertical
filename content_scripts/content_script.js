@@ -12,9 +12,9 @@
     function scale(value) {
       sub.style.flex = "0 0 " + value.toString() + "px";
 
-      // browser.storage.local.set({
-      //   lc_window_size: value
-      // })
+      browser.storage.local.set({
+        lc_window_size: value
+      })
     }
 
     // Listening to message from popup.js
