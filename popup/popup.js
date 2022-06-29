@@ -16,9 +16,9 @@ function send(command, value=null) {
 }
 
 // Check Storage for previously set scale value
-browser.storage.local.get("lc_window_size").then((results) => {
-  slider.value = results["lc_window_size"]
-})
+// browser.storage.local.get("lc_window_size").then((results) => {
+//   slider.value = results["lc_window_size"]
+// })
 
 
 // Listener for slider and switch

@@ -12,9 +12,9 @@
     function scale(value) {
       sub.style.flex = "0 0 " + value.toString() + "px";
 
-      browser.storage.local.set({
-        lc_window_size: value
-      })
+      // browser.storage.local.set({
+      //   lc_window_size: value
+      // })
     }
 
     // Listening to message from popup.js
@@ -26,9 +26,9 @@
         const container = document.querySelector("#app div[class^='container__']");
         const value = container.style.flexDirection;
         container.style.flexDirection = (value == "column") ? "row" : "column";
-        browser.storage.local.set({
-          lc_orientation: container.style.flexDirection
-        })
+        // browser.storage.local.set({
+        //   lc_orientation: container.style.flexDirection
+        // })
       }
     });
 })()
